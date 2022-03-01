@@ -115,6 +115,11 @@ app.delete('/delete/:id', function(req, res) {
 	console.log('Deleted a tweet');
 });
 
+function test_print() {
+	console.log("test code");
+}
+
+test_print();
 
 var server = app.listen(3000, function () {
    var host = server.address().address
