@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Assignment 1</title>
+		<style type="text/css">
+			body {
+				background-color: rgb(225, 225, 225);
+			}
+			
+			.panel {
+				background-color: rgb(255, 255, 255);
+				width: 80%;
+				font-size: 125%;
+				margin-left: auto;
+				margin-right: auto;
+			}
+			
+			.header {
+				background-color: rgb(100, 200, 255);
+				color: white;
+				text-align: center;
+			}
+			
+			.content {
+				min-height: 500px;
+				width: 80%;
+				margin-left: auto;
+				margin-right: auto;
+				margin-bottom: 0px;
+			}
+			
+			.content h3 {
+				margin-left: 2%;
+			}
+			
+			table, th, td {
+				background-color: rgb(230, 230, 230);
+				border: 1px solid;
+			}
+			
+			td {
+				text-align: left;
+			}
+			
+			button {
+				background-color: rgb(250, 250, 250);
+			}
+			
+			caption {
+				text-align: left;
+			}
+		</style>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="scripts.js"></script>
+	</head>
+	<body>
+		<div class="panel">
+			<div class="header">
+				<h1>Assignment 1</h1>
+			</div>
+			
+			<div class="content">
+				<h3>Twitter Post Editor</h3>
+				<hr>
+				<form id="get-form">
+					<table>
+						<caption>Get Tweet</caption>
+						<tr>
+							<td><label>Tweet ID</label></td>
+							<td><input class="form-control" type="text" name="get-tweet-id" id="get-tweet-id" required></td>
+							<td><button type="Submit" id="get" class="btn btn-success">Submit</button></td>
+						</tr>
+					</table>
+				</form>
+				<br />
+				<br />
+				<form id="create-form">
+					<table>
+						<caption>Create Tweet</caption>
+						<tr>
+							<td><label>Tweet Text</label></td>
+							<td><input class="form-control" type="text" name="create-tweet-text" id="create-tweet-text" required></td>
+						</tr>
+						<tr>
+							<td><label>Tweet ID</label></td>
+							<td><input class="form-control" type="text" name="create-tweet-id" id="create-tweet-id" required></td>
+							<td><button type="Submit" id="get" class="btn btn-success">Submit</button></td>
+						</tr>
+					</table>
+				</form>
+				<br />
+				<br />
+				<form id="update-form">
+					<table>
+						<caption>Update Username</caption>
+						<tr>
+							<td><label>Old User</label></td>
+							<td><input class="form-control" type="text" name="update-old" id="update-old" required></td>
+						</tr>
+						<tr>
+							<td><label>New User</label></td>
+							<td><input class="form-control" type="text" name="update-new" id="update-new" required></td>
+							<td><button type="Submit" id="update" class="btn btn-success">Submit</button></td>
+						</tr>
+					</table>
+				</form>
+				<br />
+				<br />
+				<form id="delete-form">
+					<table>
+						<caption>Delete Tweet</caption>
+						<tr>
+							<td><label>Tweet ID</label><td>
+							<td><input class="form-control" type="text" name="delete-id" id="delete-id" required></td>
+							<td><button type="Submit" id="update" class="btn btn-success">Submit</button></td>
+						</tr>
+					</table>
+				</form>
+				<br />
+				<hr>
+				<table id='tweetTable'>
+					<caption>Tweet Data</caption>
+					<thead>
+						<tr>
+							<th>Created Time</th>
+							<th>Text</th>
+						</tr>	
+					</thead>
+					<tbody>
+					
+					</tbody>
+				</table>
+				<br />
+				<table id='userTable'>
+					<caption>User Data</caption>
+					<thead>
+						<tr>
+							<th>User</th>
+							<th>UserID</th>
+						</tr>
+					</thead>
+					<tbody>
+						
+					</tbody>
+				</table>
+				<br />
+				<button id="get-button">Get Data</button>
+				<button id="clear-button">Clear</button>
+			</div>
+			<hr>
+		</div>
+	</body>
+</html>
